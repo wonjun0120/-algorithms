@@ -53,29 +53,114 @@ numbers.sort((a, b) => {
 
 > 선택정렬
 
+![Selection sort animation.gif](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Selection_sort_animation.gif/220px-Selection_sort_animation.gif)
+
+![img](https://upload.wikimedia.org/wikipedia/commons/9/94/Selection-Sort-Animation.gif)
+
+
+
+#### 시간복잡도
+
+__최악 시간복잡도__: O(n^2)
+
+__최선 시간복잡도__: O(n^2)
+
+__평균 시간복잡도__: O(n^2)
+
+
+
+#### 예제
+
+| 패스 |        테이블         | 최솟값 |
+| :--: | :-------------------: | :----: |
+|  0   | [**9,1,6,8,4,3,2,0**] |   0    |
+|  1   | [0,**1,6,8,4,3,2,9**] |   1    |
+|  2   | [0,1,**6,8,4,3,2,9**] |   2    |
+|  3   | [0,1,2,**8,4,3,6,9**] |   3    |
+|  4   | [0,1,2,3,**4,8,6,9**] |   4    |
+|  5   | [0,1,2,3,4,**8,6,9**] |   6    |
+|  6   | [0,1,2,3,4,6,**8,9**] |   8    |
+
+#### Code
+
+1. 주어진 리스트 중에 최소값을 찾는다.
+2. 그 값을 맨 앞에 위치한 값과 교체한다.
+3. 맨 처음 위치를 뺀 나머지 리스트를 같은 방법으로 교체한다.
+
+
+
+```javascript
+function selectionSort(arr){
+  let minIdx;	
+  let tmp;
+  
+  for(let i = 0; i < arr.length - 1; i++){
+    let minIdx = i;
+    
+    for(let j = i + 1; j < arr.length; j++){
+      if(arr[j] < arr[minIdx]) minIdx = j;
+    }
+    
+    tmp = arr[minIdx];
+    arr[minIdx] = arr[i];
+    arr[i] = tmp;
+    console.log(arr);
+  }
+  return arr;
+}
+```
+
 
 
 ## Insertion Sort
 
 > 삽입정렬
 
+#### 시간복잡도
 
+
+
+#### Code
 
 ## Bubble Sort
 
 > 버블 정렬
 
+#### 시간복잡도
 
+##### 최악 시간복잡도
+
+##### 최선 시간복잡도
+
+##### 평균 시간복잡도
+
+#### Code
 
 ## Merge Sort
 
 > 합병 정렬
 
+#### 시간복잡도
 
+##### 최악 시간복잡도
+
+##### 최선 시간복잡도
+
+##### 평균 시간복잡도
+
+#### Code
 
 ## Quick Sort
 
 > 퀵 정렬
 
+#### 시간복잡도
 
+##### 최악 시간복잡도
+
+##### 최선 시간복잡도
+
+##### 평균 시간복잡도
+
+#### Code
 
