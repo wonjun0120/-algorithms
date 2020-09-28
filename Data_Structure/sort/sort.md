@@ -116,11 +116,58 @@ function selectionSort(arr){
 
 > 삽입정렬
 
+![img](https://upload.wikimedia.org/wikipedia/commons/2/25/Insertion_sort_animation.gif)
+
+![img](https://upload.wikimedia.org/wikipedia/commons/e/ea/Insertion_sort_001.PNG)
+
 #### 시간복잡도
+
+__최악 시간복잡도__: O(n^2)
+
+__최선 시간복잡도__: O(n) 비교, O(1) 교환
+
+__평균 시간복잡도__: O(n^2)
+
+
+
+#### 예제
+
+31 25 12 22 11 -> 처음 상태
+
+31 __25__ 12 22 11 -> 두 번째 원소를 부분 리스트에서 적절한 위치에 삽입한다
+
+__25__ 31 __12__ 22 11 -> 세 번째 원소를 부분 리스트에서 적절한 위치에 삽입한다
+
+__12__ 25 31 __22__ 11 -> 네 번째 원소를 부분 리스트에서 적절한 위치에 삽입한다
+
+12 __22__ 25 31 __11__ -> 마지막 원소를 부분 리스트에서 적절한 위치에 삽입한다
+
+__11__ 12 22 25 31 -> 종료
 
 
 
 #### Code
+
+1. 현재 값을 이미 정렬된 배열에 알맞은 위치에 삽입한다
+
+
+
+```javascript
+function insertionSort(arr){
+    for(let i = 1; i < arr.length; i++){
+        let temp = arr[i];
+        let cur = i - 1;
+        
+        while((cur >= 0) && (arr[cur] > temp)){
+            arr[cur+1] = arr[cur];
+            cur -= 1;
+        }
+        arr[cur + 1] = temp;
+    }
+}
+```
+
+
 
 ## Bubble Sort
 
