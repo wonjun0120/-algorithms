@@ -148,7 +148,7 @@ __11__ 12 22 25 31 -> 종료
 
 #### Code
 
-1. 현재 값을 이미 정렬된 배열에 알맞은 위치에 삽입한다
+현재 값을 이미 정렬된 배열에 알맞은 위치에 삽입한다
 
 
 
@@ -173,15 +173,60 @@ function insertionSort(arr){
 
 > 버블 정렬
 
+![img](https://upload.wikimedia.org/wikipedia/commons/3/37/Bubble_sort_animation.gif)
+
+
+
+#### 예제
+
+```
+55 07 78 12 42  초기값[파란색은 sorting]
+07 55 78 12 42  첫 번째 패스(pass)
+07 55 78 12 42
+07 55 12 78 42
+07 55 12 42 78  두 번째 패스(pass)
+07 55 12 42 78
+07 12 55 42 78
+07 12 42 55 78  세 번째 패스(pass)
+07 12 42 55 78  네 번째 패스(pass)
+07 12 42 55 78  다섯 번째 패스(pass)
+07 12 42 55 78  정렬 끝
+```
+
+
+
 #### 시간복잡도
 
-##### 최악 시간복잡도
+__최악 시간복잡도__: O(n^2)
 
-##### 최선 시간복잡도
+__최선 시간복잡도__: O(n) 비교, O(1) 교환
 
-##### 평균 시간복잡도
+__평균 시간복잡도__: O(n^2)
+
+
 
 #### Code
+
+현재 값과 다음 값을 비교하여 정렬, 이 과정을 배열의 길이만큼 반복
+
+
+
+```javascript
+function bubbleSort(arr){
+    let tmp = 0;
+    for(let i = 0; i < arr.length; i++){
+        for(let j = 1; j < arr.length - i; j++){
+            if(arr[j] < arr[j - 1]){
+                temp = arr[j - 1];
+                arr[j - 1] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+}
+```
+
+
 
 ## Merge Sort
 
