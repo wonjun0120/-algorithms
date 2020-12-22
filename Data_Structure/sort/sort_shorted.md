@@ -20,7 +20,7 @@
 |버블 정렬|O(n^2)|O(n^2)|O(n^2)|
 |선택 정렬|O(n^2)|O(n^2)|O(n^2)|
 |삽입 정렬|O(n)|O(n^2)|O(n^2)|
-|셸 정렬|O(n)|O(n^1.5)|O(n^2)|
+|셸 정렬|O(n)|O(n^2)|O(n^1.5)|
 |퀵 정렬|O(nlog2n)|O(nlog2n)|O(n^2)|
 |병합 정렬|O(nlog2n)|O(nlog2n)|O(nlog2n)|
 |힙 정렬|O(nlog2n)|O(nlog2n)|O(nlog2n)|
