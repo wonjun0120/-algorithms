@@ -15,12 +15,12 @@
 대부분의 정렬 알고리즘은 **교환, 선택, 삽입** 이 3가지의 동작을 응용하고 있다.
 
 ## 정렬들의 시간복잡도
-|Name|Best|Worst|Avg|
+|Name|Best|Avg|Worst|
 |------|---|---|---|
 |버블 정렬|O(n^2)|O(n^2)|O(n^2)|
 |선택 정렬|O(n^2)|O(n^2)|O(n^2)|
 |삽입 정렬|O(n)|O(n^2)|O(n^2)|
-|셸 정렬|O(n)|O(n^2)|O(n^1.5)|
+|셸 정렬|O(n)|O(n^1.5)|O(n^2)|
 |퀵 정렬|O(nlog2n)|O(nlog2n)|O(n^2)|
 |병합 정렬|O(nlog2n)|O(nlog2n)|O(nlog2n)|
 |힙 정렬|O(nlog2n)|O(nlog2n)|O(nlog2n)|
